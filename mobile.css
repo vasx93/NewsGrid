@@ -1,0 +1,90 @@
+/* TABLET */
+
+/* nav bar */
+
+/*bez social */
+
+
+#main-nav .social {
+  display: none ;
+}
+
+#main-nav .container {
+  grid-template-columns: 1fr;
+  grid-gap: 1.2rem;
+}
+
+/* da budu u sredini jedan na drugom */
+#main-nav #pages,
+.logo {
+  justify-self: center;
+
+}
+
+
+/* home articles, ide u 2 kolone za tablet */
+
+#home-articles .articles-container {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+#home-articles .articles-container >*:first-child {
+  grid-template-columns: 1fr;
+  grid-column: 1;
+}
+
+/* ovako je lepse da ne ostaje praznina */
+#home-articles .articles-container >*:last-child {
+  grid-template-columns: 1fr;
+  grid-column: 1/span 2;
+}
+
+/* MOBILNE */
+
+@media(max-width:600px) {
+  /*all items should be stacked on top of each other*/
+
+  /*showcase mobilni*/
+  #showcase .showcase-container {
+    grid-template-columns:1fr; 
+    display: grid;
+  }
+  /* home artikli */
+  #home-articles .articles-container {
+    grid-template-columns: 1fr;
+  }
+  #home-articles .articles-container .card {grid-column: 1;}
+ 
+  /* footer */
+  #main-footer .footer-container {
+    grid-template-columns: 1fr;
+    
+  } 
+  /* resavamo se spana */
+  #main-footer .footer-container #copy {
+    grid-column: 1;
+  }
+  #main-footer .footer-container .one {
+    grid-column: 1;
+    padding-bottom: 1rem;
+    border-bottom: 1px dotted white;
+  }
+
+  /* ABOUT STRANA */
+
+  #about .page-container {
+    grid-template-columns: 1fr;
+  
+  }
+
+  /* single article */
+
+  #article .page-container {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  
+  
+ 
+
+}

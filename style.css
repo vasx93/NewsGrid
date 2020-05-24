@@ -1,0 +1,422 @@
+:root {
+  --primary-color: #c72727;
+  --secondary-color: #f99500;
+  --light-color: #f3f3f3;
+  --dark-color: rgb(77, 74, 74);
+  --max-width: 1100px;
+}
+
+.category {
+  --sports-color:#f99500;
+  --ent-color: #a66bbe;
+  --tech-color: #009cff;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box;}
+
+body {
+  font-family: 'Lato', sans-serif;
+  line-height: 1.5;
+  background-color: var(--light-color);
+  margin: 0 1rem;
+}
+
+a {
+  color: #333;
+  text-decoration: none;
+   
+}
+
+p {
+  margin: 0.5rem 0;
+}
+
+
+ul {
+  list-style: none;
+}
+
+img {
+  width: 100%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Staatliches', cursive;
+  margin-bottom: 0.5rem;
+  line-height: 1.3;
+}
+/* klase za bckg i padding za aritke */
+.card {
+  background:white;
+  padding: 1rem;
+  box-shadow: 3px 3px 5px #333;
+ 
+}
+
+.card p {
+  font-size: 1.1rem ;
+}
+
+.bg-dark {
+  background: var(--dark-color);
+  color: white;
+}
+.bg-primary {
+  background: var(--primary-color);
+}
+.bg-secondary {
+  background: var(--secondary-color);
+}
+
+/* headings */
+.bg-dark h1,
+.bg-dark h2,
+.bg-dark h3,
+.bg-dark a,
+.bg-primary h1,
+.bg-primary h2,
+.bg-primary h3,
+.bg-primary a,
+.bg-primary p,
+.bg-secondary h1,
+.bg-secondary h2,
+.bg-secondary h3,
+.bg-secondary a {
+  color: white;
+}
+
+.l-heading {
+  font-size: 3rem; 
+}
+
+
+
+.py-1 {padding: 1.5rem 0;}
+.py-2 {padding: 2rem 0;}
+.py-3 {padding: 3rem 0;}
+
+.p-1 {padding: 1.5rem;}
+.p-2 {padding: 2rem;}
+.p-3 {padding: 3rem;}
+
+.category-sports {background: var(--sports-color);}
+.category-ent {background: var(--ent-color);}
+.category-tech {background: var(--tech-color);}
+
+.list li {
+  padding: 0.5rem 0;
+  background-origin: #555 dotted 1px;
+  width: 90%;
+}
+
+/* nav bar */
+#main-nav {
+  background: white;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+}
+
+/* uredjujemo container, dakle grid i biramo koliko FRAKCIJA zauzima: ikonica, social, i lista */
+
+#main-nav .container {
+  display: grid;
+  grid-template-columns: 6fr 3fr 2fr;
+  padding: 1rem;
+  align-items: center;
+ 
+}
+
+#main-nav .container {
+  max-width: var(--max-width);
+  margin: auto;
+  padding: 0 2rem;
+  overflow: hidden;
+}
+
+/* ovde pocinjemo sredjivanje elemenata u kontaineru u navbaru */
+
+.logo {
+  padding: 0.5rem;
+  width: 150px;
+  height: 70px;
+  
+}
+
+/* ikonice sociala */
+#main-nav .social {
+  /* self jer je vec u gridu, i samo ovaj element sredjujemo */
+  justify-self: center;
+  margin-right: 1rem;
+}
+
+.social i {
+  margin-right: 0.7rem;
+  color: #777;
+  transition: 0.5s ;
+  
+}
+
+.social i:hover {
+  transform: scale(1.5);
+}
+
+/* da probamo sa obicnim divom 
+
+
+#main-nav ul {
+  display: flex;
+  justify-self: end;
+ 
+}
+
+#main-nav ul li a {
+  padding: 0.75rem;
+  font-weight: bold;
+}
+ 
+.current {
+  background: var(--primary-color);
+  color: white;
+}
+
+#main-nav ul li a:hover {
+  background: var(--light-color);
+  color: black;
+}
+*/
+
+/* umesto UL LI lakse je div sa 2 linka */
+#main-nav #pages {
+  display: flex;
+  justify-self: end;
+  margin-bottom: 0.5rem;
+  
+}
+
+#main-nav #pages a {
+  padding: 0.75rem;
+  
+  font-weight: bold;
+}
+
+.current {
+  background-color: var(--primary-color);
+  color: white;
+}
+#main-nav #pages a:hover {
+  background-color: var(--light-color);
+  color: black;
+}
+
+
+
+/* SHOWCASE zavrzlama */
+
+#showcase {
+  color: white;
+  background-color:#444;
+  padding: 2rem;
+  /*mora RELATIVE da bi radilo :before za overlay, i slika ce biti absolute*/
+  position: relative;
+}
+/* slika */
+#showcase:before {
+  /*obavezno content */
+  content: '';
+  background: url('./img/store.jpg')no-repeat center center/cover;
+
+  /*position absolute znaci ide preko svog parenta */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.5;
+
+}
+
+/* ide grid, text levo zato je grid, lakse je flex ali idemo na grid -- repeat 2, 1fr da bi ga oterao levo, i naravno centriranje */
+.showcase-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  height: 50vh;
+  justify-content: center;
+  align-items: center;
+}
+
+/* text je ispod slike zato dodajemo z index */
+.showcase-content {
+  z-index: 1;
+  
+}
+
+
+/* malo SPORTS i TECH iznad artikla, dakle ovo je unapred za sve*/
+.category {
+  display: inline-block;
+  color: white;
+  font-size: 0.85rem; 
+  padding: 0.4rem 0.6rem;
+  border-radius: 15px;
+  margin-bottom: 0.5rem;
+  transition: all 0.5s ease-out;
+}
+
+.category:hover {
+  transform: scale(1.15);
+}
+.showcase-content p {
+  margin-bottom: 1rem;
+}
+
+/* btn klase, opet se gubi unapred */
+
+.btn {
+  display: inline-block;
+  border: none;
+  background: var(--dark-color);
+  color: white;
+  padding: 0.5rem 1.5rem;
+  border-radius: 5px;
+  transition: 0.5s;
+  
+}
+
+.btn:hover {
+  opacity: 0.9;
+  transform: scale(1.25);
+}
+
+.btn-block {
+  display: block;
+  width: 100%;
+  text-align: center;
+}
+
+.btn-light {background: var(--light-color);}
+.btn-primary {background: var(--primary-color);}
+.btn-secondary {background: var(--secondary-color);}
+
+
+/* HOME ARTICLES */
+
+.container h2 {
+  margin: 1rem 0;
+  padding:0 2rem;
+}
+
+
+
+  /* ovo je grid container */
+.articles-container {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  grid-gap: 1rem;
+}
+
+/* span prvog i poslednjeg da bude jednako */
+
+.articles-container article:first-child {
+  /* pretvaramo taj article u grid, delimo na dva dela u sliku i tekst */
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  grid-gap: 1rem;
+  grid-column: 1/span 2;
+  align-items: center;
+  
+}
+
+.articles-container article:last-child {
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  grid-gap: 1rem;
+  align-items: center;
+  /*span*/
+  grid-column:2 / span 2  ;
+}
+
+/* FOOTER */
+
+#main-footer {
+  background-color: var(--dark-color);
+  color: white;
+}
+
+#main-footer img {
+  width: 150px;
+}
+#main-footer a {
+  color: white;
+}
+/* ceo footer dobija grid, bice po 1 kolona */
+#main-footer .footer-container {
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  grid-gap: 1.5rem;
+  padding: 1rem 1.5rem;
+}
+  /* pravi footer malo stilizujemo, spanuje se do kraja */
+#main-footer .footer-container #copy {
+  background-color: #444;
+  grid-column: 1 / span 4;
+  padding: 0.5rem;
+  text-align: center;
+  font-size: 0.8rem;
+  letter-spacing: 0.1rem;
+}
+
+
+/* resavamo inpute, cist CSS */
+#main-footer .footer-container input[type="email"] {
+  width: 90%;
+  padding: 0.5rem;
+  margin: 0.5rem 0;
+}
+
+#main-footer .footer-container input[type="submit"] {
+  width: 90%;}
+
+
+/* sredjujemo listu tj tabelu */
+.list li {
+  padding: 0.5rem 0;
+  background-origin: #555 dotted 1px;
+  width: 90%;
+}
+
+.list li a:hover  {
+  color: var(--primary-color) !important;
+}
+
+/* ABOUT STRANA */
+/*page container je grid container kao main deo */
+.page-container {
+  display: grid;
+  grid-template-columns: 5fr 2fr;
+  margin: 2rem 0;
+  grid-gap:1.5rem;
+
+}
+/* da ovaj deo aside ne bi bio isti HEIGHT kao MAIN, ubacis ovo */
+.page-container > *:first-child {
+  grid-row: 1 / span 3;
+}
+
+
+/* single article strana */
+
+/* meta text */
+#article .meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #eee;
+  padding: 0.5rem;
+
+
+}
+
+#article .meta .category {
+  margin-top: 0.4rem;
+}

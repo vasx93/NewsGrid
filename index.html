@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/1bb7a3dd1c.js" crossorigin="anonymous"></script>
+  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" media="screen and (max-width:768px)" href="mobile.css">
+  
+  <title>News | Global Daily News</title>
+</head>
+<body>
+
+  <nav id="main-nav">
+    <div class="container">
+      <img class="logo" src="/img/logo.png" alt="The Guardian">
+      <div class="social">
+        <a href="http://facebook.com" target="_blank"><i class="fab fa-facebook fa-2x"></i></a>
+        <a href="http://twitter.com" target="_blank"><i class="fab fa-twitter fa-2x"></i></a>
+        <a href="http://instagram.com" target="_blank"><i class="fab fa-instagram fa-2x"></i></a>
+        <a href="http://youtube.com" target="_blank"><i class="fab fa-youtube fa-2x"></i></a>
+
+        <!-- umesto liste bolje je div sa 2 linka-->
+      </div>
+      <div id="pages">
+        <a class="current" href="index.html">Home</a>
+        <a href="about.html">About</a>
+      </div>
+    </div>
+  </nav> 
+      <!--<ul>
+        <li><a class="current" href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>-->
+      
+      <!-- SHOWCASE-->
+
+   <header id="showcase">
+     <div class="container">
+       <div class="showcase-container">
+         <div class="showcase-content">
+           <div class="category     category-sports">SPORTS</div>
+           <h1>Some Sports News</h1>
+           <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. At, consequuntur dolor aperiam qui recusandae ipsum, est suscipit inventore quidem error architecto ad praesentium. Libero amet voluptas enim tempora ad placeat!</p>
+           <a href="article.html" class="btn btn-primary">Read More</a>
+         </div>
+      </div>
+     </div>
+   </header>
+
+   <!-- HOME-->
+
+  <section id="home-articles" class="py-2">
+    <div class="container">
+      <h2>Editos Choice</h2>
+      <div class="articles-container">
+        <!-- article one-->
+        <article class="card">
+          <img src="./img/fitnes.png" alt="sports">
+          <div>
+            <div class="category category-ent">Entertainment</div>
+            <h3><a href="article.html">Lorem ipsum dolor sit amet.</a></h3>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptates repellendus veniam aliquid doloribus, expedita eum debitis sint maxime eaque amet.</p>
+          </div>
+        </article>
+        <!-- article two-->
+        <article class="card bg-dark" >
+          <div class="category category-sports">Sports</div>
+            <h3><a href="article.html">Lorem ipsum dolor sit amet.</a></h3>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptates repellendus veniam aliquid doloribus, expedita eum debitis sint maxime eaque amet.</p>
+        </article>
+        <!-- article 3-->
+        <article class="card ">
+          <img src="./img/bike.png" alt="">
+          <div class="category category-tech">Technology</div>
+            <h3><a href="article.html">Lorem ipsum dolor sit amet.</a></h3>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptates repellendus veniam aliquid doloribus, expedita eum debitis sint maxime eaque amet.</p>
+        </article>
+        <!-- article 4-->
+        <article class="card">
+           <div class="category category-sports">Sports</div>
+             <h3><a href="article.html">Lorem ipsum dolor sit amet.</a></h3>
+             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptates repellendus veniam aliquid doloribus, expedita eum debitis sint maxime eaque amet.</p>
+             <img src="./img/athlete.png" alt="">
+        </article>
+        <!--article 5-->
+        <article class="card">
+          <img src="./img/running.png" alt="">
+          <div class="category category-tech">Technology</div>
+            <h3><a href="article.html">Lorem ipsum dolor sit amet.</a></h3>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptates repellendus veniam aliquid doloribus, expedita eum debitis sint maxime eaque amet.</p>
+        </article>
+        <!-- article 6-->
+        <article class="card bg-primary">
+          <div class="category category-sports">Sports</div>
+            <h3><a href="article.html">Lorem ipsum dolor sit amet.</a></h3>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptates repellendus veniam aliquid doloribus, expedita eum debitis sint maxime eaque amet.</p>
+        </article>
+        <!--last article-->
+        <article class="card">
+          
+          <div>
+            <div class="category category-ent">Entertainment</div>
+            <h3><a href="article.html">Lorem ipsum dolor sit amet.</a></h3>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptates repellendus veniam aliquid doloribus, expedita eum debitis sint maxime eaque amet.</p>
+          </div>
+          <img src="./img/tenisball.png" alt="sports">
+        </article>
+     </div>
+    </div>    
+  </section>
+
+  <!--FOOTER-->
+
+  <footer id="main-footer">
+    <div class="footer-container">
+      <div class="one">
+        <img src="./img/logo.png" alt="">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime exercitationem laborum quasi modi nisi fugiat aliquid est optio, praesentium ullam.</p>
+      </div>
+      <div class="one">
+        <h3>Email newsletter</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+        <form>
+          <input type="email" name="email" id="email" placeholder="type your email">
+          <input type="submit" value="Subscribe" class="btn btn-primary">
+        </form>
+      </div>
+      <div class="one">
+        <h3>Site Links</h3>
+        <ul class="list">
+          <li><a href="#">Help & Support</a></li>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+      <div class="one">
+        <h2>Join Our Club</h2>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nobis, cumque?</p>
+        <a href="#" class="btn btn-secondary">Join Now</a>
+      </div>
+      <div class="one" id="copy">
+        <p>Copyright &copy; 2020 All Rights Reserved</p>
+      </div>
+    </div>
+  </footer>
+   
+</body>
+</html>
