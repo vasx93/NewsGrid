@@ -121,7 +121,7 @@ h1, h2, h3, h4, h5, h6 {
 
 #main-nav .container {
   display: grid;
-  grid-template-columns: 6fr 3fr 2fr;
+  grid-template-columns: 5fr 3fr 4fr;
   padding: 1rem;
   align-items: center;
  
@@ -207,6 +207,7 @@ h1, h2, h3, h4, h5, h6 {
 #main-nav #pages a:hover {
   background-color: var(--light-color);
   color: black;
+  
 }
 
 

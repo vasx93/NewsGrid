@@ -4,14 +4,14 @@
 
 /*bez social */
 
-
-#main-nav .social {
-  display: none ;
+.logo {
+  display: none;
 }
 
 #main-nav .container {
   grid-template-columns: 1fr;
-  grid-gap: 1.2rem;
+  grid-gap: 1rem;
+  padding: 1rem;
 }
 
 /* da budu u sredini jedan na drugom */
@@ -48,6 +48,9 @@
   #showcase .showcase-container {
     grid-template-columns:1fr; 
     display: grid;
+  }
+  .logo {
+    display: none;
   }
   /* home artikli */
   #home-articles .articles-container {
