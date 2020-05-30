@@ -49,8 +49,13 @@ h1, h2, h3, h4, h5, h6 {
 .card {
   background:white;
   padding: 1rem;
-  box-shadow: 3px 3px 5px #333;
- 
+  }
+
+@media(min-width: 1100px) {
+  .card:hover {
+    border: 1px solid #444;
+    box-shadow: 2px 2px  5px #555;
+  }
 }
 
 .card p {
